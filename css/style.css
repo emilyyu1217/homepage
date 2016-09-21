@@ -1,0 +1,56 @@
+body {
+    height: 100vh;
+    margin: 0 0 0 0;
+
+    background-color: gray;
+}
+
+#wrap {
+    width: 50%;
+    height: 100%; 
+
+    margin: 0 auto 0; /* centering */
+
+    background-color: darkgray;
+}
+
+/* Header */
+
+header #title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 7em;
+
+    text-align: center;
+    font-stretch: extra-expanded;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    height: 2em;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+nav a.active {
+    color: orangered;
+}
+
+/* Main */
+
+main {
+    padding: 1em 1em 1em 1em;
+}
