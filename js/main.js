@@ -11,7 +11,7 @@ var activeClass = "active";
 // adds events, loads content initially
 $(function() {
     // add event for hash changes
-    $(window).hashchange(reloadContent());
+    $(window).hashchange(reloadContent);
 
     // load content initially
     reloadContent();
