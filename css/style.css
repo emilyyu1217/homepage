@@ -1,43 +1,64 @@
+/* Fonts */
+
+@font-face {
+    font-family: custom;
+    src: url(../fonts/Muli/Muli-ExtraLight.ttf);
+    /*src: url(../fonts/Exo2/Exo2-LightCondensed.otf);*/
+}
+
+@font-face {
+    font-family: custom-expanded;
+    src: url(../fonts/Muli/Muli-ExtraLight.ttf);
+    /*src: url(../fonts/Exo2/Exo2-LightExpanded.otf);*/
+}
+
+/* Body and Wrappers */
+
 body {
     height: 100vh;
     margin: 0 0 0 0;
 
-    background-color: gray;
+    background-color: white;
 }
 
 #wrap {
-    width: 50%;
+    width: 40em;
     height: 100%; 
 
     margin: 0 auto 0; /* centering */
 
-    background-color: darkgray;
+    background-color: white;
 }
 
 /* Header */
 
+header {
+    height: 10em;
+}
+
 header #title {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
 
-    height: 7em;
+    height: 70%;
 
+    font-family: custom-expanded;
     text-align: center;
-    font-stretch: extra-expanded;
 }
 
-/* Navigation */
-
-nav {
+header nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
 
     height: 2em;
+
+    font-family: custom;
+    font-size: large;
 }
 
-nav a {
+header nav a {
     color: black;
     text-decoration: none;
 
@@ -45,12 +66,24 @@ nav a {
     padding-right: 1em;
 }
 
-nav a.active {
+header nav a.active {
     color: orangered;
 }
+
+/*header hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid lightgray;
+    margin: 0;
+    padding: 0; 
+}*/
 
 /* Main */
 
 main {
     padding: 1em 1em 1em 1em;
+
+    font-family: custom;
+    font-size: large;
 }

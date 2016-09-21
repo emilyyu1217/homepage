@@ -7,7 +7,7 @@ var articleBasePath = contentBasePath + "articles/";
 var imageBasePath = contentBasePath + "images/";
 
 var baseHeight = 0;
-var fadeOutSpeed = 200, fadeInSpeed = fadeOutSpeed;
+var fadeOutSpeed = 100, fadeInSpeed = fadeOutSpeed;
 
 var activeClass = "active";
 
