@@ -22,7 +22,7 @@ body {
 }
 
 #wrap {
-    width: 40em;
+    width: 30em;
     height: 100%; 
 
     margin: 0 auto 0; /* centering */
@@ -32,19 +32,19 @@ body {
 
 /* Header */
 
-header {
-    height: 10em;
-}
-
 header #title {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: center;
 
-    height: 70%;
+    margin-top: 3em;
+    margin-bottom: 1.75em;
+}
 
-    font-family: custom-expanded;
-    text-align: center;
+header #title img {
+    max-width: 35%;
+    width: auto;
+    height: auto;
 }
 
 header nav {
@@ -86,4 +86,12 @@ main {
 
     font-family: custom;
     font-size: large;
+}
+
+/* Contact */
+
+#contact #contact-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
