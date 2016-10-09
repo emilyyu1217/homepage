@@ -5,7 +5,7 @@ var articleBasePath = contentBasePath + "articles/";
 var imageBasePath = contentBasePath + "images/";
 
 var fadeOutSpeed = 100, fadeInSpeed = fadeOutSpeed;
-var defaultSubpage = "#about";
+var defaultPage = "#about";
 var activeClass = "active";
 
 // adds events, loads content initially
@@ -24,7 +24,7 @@ reloadContent = function() {
     var main = $("main"), cont = main.find("#content"), wrap = $("wrap"), nav = $("nav"), nav_a = $("nav a");
 
     // get hash from URL or fallback
-    var hash = location.hash || defaultSubpage;
+    var hash = location.hash || defaultPage;
 
     // fade out, load new content, fade in 
     cont.fadeOut(fadeOutSpeed, function() {
@@ -37,3 +37,7 @@ reloadContent = function() {
     nav_a.removeClass(activeClass);
     $("nav a[href$='" + hash + "']").addClass(activeClass);
 };
+
+loadEmail = function(sender, lhs, rhs) {
+    $("#" + sender.id).attr("href", "mailto:" + lhs + "@" + rhs);
+}

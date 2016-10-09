@@ -12,22 +12,30 @@
     /*src: url(../fonts/Exo2/Exo2-LightExpanded.otf);*/
 }
 
+/* Global settings */
+
+a {
+    color: slategrey;
+    
+    text-decoration: none;
+    font-style: italic;
+}
+
 /* Body and Wrappers */
 
-body {
-    height: 100vh;
-    margin: 0 0 0 0;
+html, body, #wrap {
+    height: 100%;
 
     background-color: white;
 }
 
-#wrap {
+body > #wrap {
+    height: auto;
     width: 30em;
-    height: 100%; 
 
-    margin: 0 auto 0; /* centering */
+    min-height: 100%;
 
-    background-color: white;
+    margin: 0 auto 0;
 }
 
 /* Header */
@@ -60,29 +68,30 @@ header nav {
 
 header nav a {
     color: black;
-    text-decoration: none;
+
+    font-style: normal;
 
     padding-left: 1em;
     padding-right: 1em;
 }
 
-header nav a.active {
-    color: orangered;
+header nav a:hover {
+    color: slategray;
 }
 
-/*header hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid lightgray;
-    margin: 0;
-    padding: 0; 
-}*/
+header nav a.active {
+    color: orangered;
+
+    pointer-events: none;
+}
 
 /* Main */
 
 main {
     padding: 1em 1em 1em 1em;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
 
     font-family: custom;
     font-size: large;
@@ -91,7 +100,78 @@ main {
 /* Contact */
 
 #contact #contact-buttons {
+    margin-top: 2em;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
+
+#contact-buttons > a {
+    display: block;
+
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    width: 1.75em;
+    height: 1.75em;
+
+    background: transparent url(../icons/www-white.svg) center top no-repeat;
+}
+
+/* email */
+#contact-buttons > a#contact-email {
+    background-image: url(../icons/email-white.svg);
+}
+
+#contact-buttons > a#contact-email:hover {
+    background-image: url(../icons/email-black.svg);
+}
+
+/* linkedin */
+#contact-buttons > a#contact-linkedin {
+    background-image: url(../icons/linkedin-white.svg);
+}
+
+#contact-buttons > a#contact-linkedin:hover {
+    background-image: url(../icons/linkedin-black.svg);
+}
+
+/* facebook */
+#contact-buttons > a#contact-facebook {
+    background-image: url(../icons/facebook-white.svg);
+}
+
+#contact-buttons > a#contact-facebook:hover {
+    background-image: url(../icons/facebook-black.svg);
+}
+
+/* instagram */
+#contact-buttons > a#contact-instagram {
+    background-image: url(../icons/instagram-white.svg);
+}
+
+#contact-buttons > a#contact-instagram:hover {
+    background-image: url(../icons/instagram-black.svg);
+}
+
+/* github */
+#contact-buttons > a#contact-github {
+    background-image: url(../icons/github-white.svg);
+}
+
+#contact-buttons > a#contact-github:hover {
+    background-image: url(../icons/github-black.svg);
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-family: custom;
+    font-size: small;
+}
+
